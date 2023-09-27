@@ -6,7 +6,10 @@ public class VacationCalculationService {
         for(int month = 0; month < 12; month++) {
             if (balance >= threshold) {
                 vacationMonthCount++;
-                balance = balance - income - expenses - balance / 3;
+                balance = balance  - expenses;
+                balance = balance / 3;
+
+
             } else {
                 balance = balance + income - expenses;
             }
